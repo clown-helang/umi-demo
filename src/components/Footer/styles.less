@@ -1,0 +1,106 @@
+/* 底部高度 */
+@footerHeight: @ratio*3.08;
+
+.footer{
+  height: @ratio * 3.08;
+  width: 100%;
+  .container{
+    width: @footerWidth;
+    margin: 0 auto;
+    padding-top: @ratio*0.54;
+    .content{
+      width: 100%;
+      height: @ratio*1.64;
+      border-bottom: 1px solid #35324f;
+      .links{
+        width: @linksWidth;
+        height: @ratio*1.16;
+        border-right: 1px solid #35324f;
+        float: left;
+        .item{
+          width: 25%;
+          color: white;
+          float: left;
+          text-align: left;
+          h3{
+            margin: 0 0 @ratio*0.3;
+            padding: 0;
+            font-size: 1.6rem;
+            height: @ratio*0.2;
+            line-height: @ratio*0.2;
+            color: white;
+          }
+          ul{
+            margin: 0;
+            padding: 0;
+            li{
+              list-style: none;
+              font-size: 1.4rem;
+              color: rgba(255,255,255,0.6);
+              cursor: pointer;
+              height: @ratio*0.18;
+              line-height: @ratio*0.18;
+              &:hover{
+                color: white;
+              }
+              &:nth-child(even){
+                margin: @ratio*0.05 0;
+              }
+            }
+          }
+        }
+      }
+      .contact{
+        width: @contactWidth;
+        height: @ratio*1.16;
+        float: left;
+        .QRCode{
+          width: @ratio*1.1;
+          height: @ratio*1.1;
+          margin-left: @QRCodeMargin;
+          float: left;
+          border: 1px solid white;
+        }
+        .address{
+          float: left;
+          margin-left: @addressMargin;
+          width: @addressWidth;
+          height: @ratio*1.1;
+          p{
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            height: @ratio*0.24;
+            line-height: @ratio*0.24;
+            color: white;
+            .icon{
+              width: @ratio*0.22;
+              height: @ratio*0.22;
+              display: inline-block;
+              margin-right: 10px;
+              float: left;
+              font-size: 1.8rem;
+            }
+            .text{
+              font-size: 1.6rem;
+              height: @ratio*0.24;
+              line-height: @ratio*0.24;
+            }
+            &:nth-child(even){
+              margin: @ratio*0.2 0;
+            }
+          }
+        }
+      }
+    }
+    .copyright{
+      width: 100%;
+      height: @ratio*0.9;
+      line-height: @ratio*0.9;
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+  }
+}

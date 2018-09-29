@@ -1,0 +1,78 @@
+/* 网页默认宽度 */
+@width: @ratio*14.48;
+
+/* 导航高度 */
+@navHeight: @ratio*0.48;
+@logoWidth: @ratio*1.35;
+@menuMargin: @ratio*0.75;
+
+.container{
+  width: 100%;
+  position: absolute;
+  top: 0.25*@ratio;
+  z-index: 999;
+  .navBar{
+    width: @width;
+    height: @navHeight;
+    margin: 0 auto;
+    color: #fff;
+    .logo{
+      float: left;
+      margin-left: @ratio*1.1;
+      margin-right: @ratio*0.9;
+      height: @navHeight;
+      width: @logoWidth;
+      border: 1px solid #ffffff;
+    }
+    .menus{
+      float: left;
+      ul{
+        height: @navHeight - 2;
+        line-height: @navHeight - 2;
+        margin: 0;
+        padding: 0;
+        li{
+          float: left;
+          list-style: none;
+          margin-right: @menuMargin;
+          cursor: pointer;
+          font-size: 1.6rem;
+        }
+        .active{
+          color: #00f7fe;
+          border-bottom: solid 2px #00f7fe;
+        }
+      }
+    }
+  }
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  background-color: #0c0a1a;
+  animation:slideIn 0.5s ease-out 0s 1;
+  -moz-animation: slideIn 0.5s ease-out 0s 1;
+  -webkit-animation: slideIn 0.5s ease-out 0s 1;
+  -o-animation: slideIn 0.5s ease-out 0s 1;
+  @keyframes slideIn{
+    0% {top: 0.25*@ratio }
+    100%{top: 0;}
+  }
+  @-moz-keyframes slideIn /* Firefox */
+  {
+    0% {top: 0.25*@ratio }
+    100%{top: 0;}
+  }
+
+  @-webkit-keyframes slideIn /* Safari 和 Chrome */
+  {
+    0% {top: 0.25*@ratio }
+    100%{top: 0;}
+  }
+
+  @-o-keyframes slideIn /* Opera */
+  {
+    0% {top: 0.25*@ratio }
+    100%{top: 0;}
+  }
+}

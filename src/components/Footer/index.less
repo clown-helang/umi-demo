@@ -1,0 +1,52 @@
+@import "../../theme";
+
+@ratio: @base;
+
+@ratio: 0.94337*@base;
+
+@footerWidth: @ratio*11.72;
+
+@linksWidth: @ratio*6.41;
+
+@contactWidth: @ratio*5.3;
+
+@addressWidth: @ratio*2.98;
+
+@addressMargin: @ratio*0.48;
+
+@QRCodeMargin: @ratio*0.7;
+
+@media screen and (min-width: 1448px){
+  @import (multiple) "./styles";
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1448px){
+  @ratio: 0.94337*@base;
+  @import (multiple) "./styles";
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1365px){
+  @ratio: 0.8839779*@base;
+  @import (multiple) "./styles";
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+  @ratio: 0.70718*@base;
+  @footerWidth: 90%;
+  @linksWidth: 54.74%;
+  @contactWidth:  45.26%;
+  @addressWidth: @ratio*3.3;
+  @addressMargin: @ratio*0.36;
+  @import (multiple) "./styles";
+}
+
+@media screen and (max-width: 1023px){
+  @ratio: 0.552486*@base;
+  @footerWidth: 90%;
+  @linksWidth: 54.74%;
+  @contactWidth: 45.26%;
+  @addressWidth: @ratio*3.8;
+  @addressMargin: @ratio*0.24;
+  @QRCodeMargin: @ratio*0.35;
+  @import (multiple) "./styles";
+}

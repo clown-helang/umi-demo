@@ -1,0 +1,533 @@
+/* 网页宽度 */
+@width: @ratio*14.48;
+/* 主体块高度 */
+@blockHeight: @ratio*6.8;
+
+/* 底部高度 */
+@footerHeight: @ratio*3.08;
+
+/* 幻灯片 */
+@slideLeft: @ratio*3.3;
+@slideTop: @ratio*1.75;
+@slideWidth: @ratio*3.6;
+@slideHeight: @ratio*3.5;
+
+/* 产品 */
+@productSide: @ratio*3.46;
+@productContentHeight: @ratio*3.2;
+@productPictureHeight: @ratio*2.35;
+@productTitleHeight: @ratio*0.26;
+
+/* 应用场景 */
+@appSideHeight: @ratio*4.4;
+@appSideWidth: @ratio*2.82;
+@appContentHeight: @ratio*4.15;
+@appPictureHeight: @ratio*3.76;
+@appTitleHeight: @ratio*0.25;
+
+.block{
+  width: @width;
+  height: @blockHeight;
+}
+
+.container{
+  width: 100%;
+  .header{
+    background-color: #0c0a1a;
+    width: 100%;
+    .banner{
+      .block();
+      margin: 0 auto;
+      background: url("../../assets/images/banner.jpg") no-repeat;
+      background-size: @width @blockHeight;
+      .label{
+        width: 100%;
+        height: @ratio;
+        position: relative;
+        top: @ratio*1.55;
+        p{
+          text-align: center;
+          color: white;
+          letter-spacing: 0.1em;
+          &:first-child{
+            font-size: 4.8rem;
+            height: @ratio*0.48;
+            line-height: @ratio*0.48;
+            margin-bottom: @ratio*0.3;
+            span:nth-child(even){
+              display: inline-block;
+              margin: 0 @ratio*0.4;
+            }
+          }
+          &:last-child{
+            font-size: 2rem;
+            height: @ratio*0.20;
+            line-height: @ratio*0.20;
+          }
+        }
+      }
+      .slide{
+        position: relative;
+        left: @slideLeft;
+        top: @slideTop;
+        width: @slideWidth;
+        height: @slideHeight;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .body{
+    margin: 0 auto;
+    max-width: @width;
+    /* --- 产品 ---*/
+    .products{
+      .block();
+      padding-top: @ratio*0.75;
+      h1{
+        letter-spacing: 0.2em;
+        margin-bottom: @ratio*0.8;
+        color: @fontColor;
+        font-size: 3.2rem;
+        height: @ratio*0.32;
+        line-height: @ratio*0.32;
+      }
+      .productContent{
+        margin: 0 @ratio*1.59;
+        .item{
+          width: @productSide;
+          height: @productSide;
+          float: left;
+          cursor: pointer;
+          .content{
+            height: @productContentHeight;
+            width: 100%;
+            .picture{
+              height: @productPictureHeight;
+              width: 100%;
+              background-color: #f7f7f7;
+              border-radius: @ratio*0.1;
+              img{
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+                transition:all 0.5s; /*图片放大过程的时间*/
+                position: relative;
+                &:hover{
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+          .title{
+            height: @productTitleHeight;
+            font-size: 2.4rem;
+            letter-spacing: 0.2em;
+            color: @fontColor;
+          }
+          &:nth-child(even){
+            margin: 0 @ratio*0.46;
+          }
+        }
+      }
+    }
+
+    /* --- 视频媒体 SAAS 平台 ---*/
+    .softwarePlant{
+      .block();
+      background: url("../../assets/images/sass.jpg") no-repeat;
+      background-size: @width @blockHeight;
+      .label{
+        width: 100%;
+        height: @ratio;
+        position: relative;
+        top: @ratio*0.85;
+        p{
+          text-align: center;
+          color: white;
+          letter-spacing: 0.1em;
+          &:first-child{
+            font-size: 3.2rem;
+            height: @ratio*0.32;
+            line-height: @ratio*0.32;
+            margin-bottom: @ratio*0.4;
+            span:nth-child(even){
+              display: inline-block;
+              margin: 0 @ratio*0.4;
+            }
+          }
+          &:last-child{
+            font-size: 1.8rem;
+            height: @ratio*0.18;
+            line-height: @ratio*0.18;
+          }
+        }
+      }
+      .specialty{
+        width: 0.7*@ratio;
+        height: 0.7*@ratio;
+        position: relative;
+        .title{
+          width: 100%;
+          position: relative;
+          top: 0.06*@ratio;
+          text-align: center;
+          color: white;
+          font-size: 1.6rem;
+          z-index: 9;
+        }
+        img{
+          position: relative;
+          top: -0.2*@ratio;
+          width: 100%;
+          height: auto;
+        }
+      }
+      .specialty_0{
+        top: 4.1*@ratio;
+        left: 2.6*@ratio;
+        animation: pules_0 5s linear 0s infinite;
+        -moz-animation: pules_0 5s linear 0s infinite;
+        -webkit-animation: pules_0 5s linear 0s infinite;
+        -o-animation: pules_0 5s linear 0s infinite;
+
+        @keyframes pules_0{
+          0% {top: 4.1*@ratio}
+          50% { top: 3.7*@ratio}
+          100%{ top: 4.1*@ratio }
+        }
+        /* Firefox */
+        @-moz-keyframes pules_0 {
+          0% {top: 4.1*@ratio}
+          50% { top: 3.7*@ratio}
+          100%{ top: 4.1*@ratio }
+        }
+        /* Safari 和 Chrome */
+        @-webkit-keyframes pules_0 {
+          0% {top: 4.1*@ratio}
+          50% { top: 3.7*@ratio}
+          100%{ top: 4.1*@ratio }
+        }
+        /* Opera */
+        @-o-keyframes pules_0 {
+          0% {top: 4.1*@ratio}
+          50% { top: 3.7*@ratio}
+          100%{ top: 4.1*@ratio }
+        }
+
+        &:hover{
+          animation-play-state:paused;
+        }
+        .title{
+          transform: rotate3d(-1, 1, -1, 40deg);
+          -ms-transform: rotate3d(-1, 1, -1, 40deg); 	/* IE 9 */
+          -moz-transform: rotate3d(-1, 1, -1, 40deg); 	/* Firefox */
+          -webkit-transform: rotate3d(-1, 1, -1, 40deg); /* Safari 和 Chrome */
+          -o-transform: rotate3d(-1, 1, -1, 40deg); 	/* Opera */
+        }
+      }
+      .specialty_1{
+        top: 1.95*@ratio;
+        left: 3.85*@ratio;
+        animation:pules_1 5s linear 0s infinite;
+        -moz-animation: pules_1 5s linear 0s infinite;
+        -webkit-animation: pules_1 5s linear 0s infinite;
+        -o-animation: pules_1 5s linear 0s infinite;
+
+        @keyframes pules_1{
+          0% {top: 1.95*@ratio}
+          50% { top: 2.35*@ratio}
+          100%{ top: 1.95*@ratio }
+        }
+        /* Firefox */
+        @-moz-keyframes pules_1 {
+          0% {top: 1.95*@ratio}
+          50% { top: 2.35*@ratio}
+          100%{ top: 1.95*@ratio }
+        }
+        /* Safari 和 Chrome */
+        @-webkit-keyframes pules_1 {
+          0% {top: 1.95*@ratio}
+          50% { top: 2.35*@ratio}
+          100%{ top: 1.95*@ratio }
+        }
+        /* Opera */
+        @-o-keyframes pules_1 {
+          0% {top: 1.95*@ratio}
+          50% { top: 2.35*@ratio}
+          100%{ top: 1.95*@ratio }
+        }
+
+        &:hover{
+          animation-play-state:paused;
+        }
+        .title{
+          transform: rotate3d(-1, 1, -1, 35deg);
+          -ms-transform: rotate3d(-1, 1, -1, 35deg); 	/* IE 9 */
+          -moz-transform: rotate3d(-1, 1, -1, 35deg); 	/* Firefox */
+          -webkit-transform: rotate3d(-1, 1, -1, 35deg); /* Safari 和 Chrome */
+          -o-transform: rotate3d(-1, 1, -1, 35deg); 	/* Opera */
+        }
+      }
+      .specialty_2{
+        top: 0.8*@ratio;
+        left: 5.5*@ratio;
+        animation:pules_2 5s linear 0s infinite;
+        -moz-animation: pules_2 5s linear 0s infinite;
+        -webkit-animation: pules_2 5s linear 0s infinite;
+        -o-animation: pules_2 5s linear 0s infinite;
+
+        @keyframes pules_2{
+          0% {top: 0.8*@ratio}
+          50% { top: 0.4*@ratio}
+          100%{ top: 0.8*@ratio }
+        }
+        /* Firefox */
+        @-moz-keyframes pules_2 {
+          0% {top: 0.8*@ratio}
+          50% { top: 0.4*@ratio}
+          100%{ top: 0.8*@ratio }
+        }
+        /* Safari 和 Chrome */
+        @-webkit-keyframes pules_2 {
+          0% {top: 0.8*@ratio}
+          50% { top: 0.4*@ratio}
+          100%{ top: 0.8*@ratio }
+        }
+        /* Opera */
+        @-o-keyframes pules_2 {
+          0% {top: 0.8*@ratio}
+          50% { top: 0.4*@ratio}
+          100%{ top: 0.8*@ratio }
+        }
+
+        &:hover{
+          animation-play-state:paused;
+        }
+        .title{
+          transform: rotate3d(-1, 1, -1, 35deg);
+          -ms-transform: rotate3d(-1, 1, -1, 35deg); 	/* IE 9 */
+          -moz-transform: rotate3d(-1, 1, -1, 35deg); 	/* Firefox */
+          -webkit-transform: rotate3d(-1, 1, -1, 35deg); /* Safari 和 Chrome */
+          -o-transform: rotate3d(-1, 1, -1, 35deg); 	/* Opera */
+        }
+      }
+      .specialty_3{
+        top: -0.7*@ratio;
+        left: 6.7*@ratio;
+        animation:pules_3 5s linear 0s infinite;
+        -moz-animation: pules_3 5s linear 0s infinite;
+        -webkit-animation: pules_3 5s linear 0s infinite;
+        -o-animation: pules_3 5s linear 0s infinite;
+
+        @keyframes pules_3{
+          0% {top: -0.7*@ratio}
+          50% { top: -0.3*@ratio}
+          100%{ top: -0.7*@ratio }
+        }
+        /* Firefox */
+        @-moz-keyframes pules_3 {
+          0% {top: -0.7*@ratio}
+          50% { top: -0.3*@ratio}
+          100%{ top: -0.7*@ratio }
+        }
+        /* Safari 和 Chrome */
+        @-webkit-keyframes pules_3 {
+          0% {top: -0.7*@ratio}
+          50% { top: -0.3*@ratio}
+          100%{ top: -0.7*@ratio }
+        }
+        /* Opera */
+        @-o-keyframes pules_3 {
+          0% {top: -0.7*@ratio}
+          50% { top: -0.3*@ratio}
+          100%{ top: -0.7*@ratio }
+        }
+
+        &:hover{
+          animation-play-state:paused;
+        }
+        .title{
+          transform: rotate3d(-1, 1, -1, 35deg);
+          -ms-transform: rotate3d(-1, 1, -1, 35deg); 	/* IE 9 */
+          -moz-transform: rotate3d(-1, 1, -1, 35deg); 	/* Firefox */
+          -webkit-transform: rotate3d(-1, 1, -1, 35deg); /* Safari 和 Chrome */
+          -o-transform: rotate3d(-1, 1, -1, 35deg); 	/* Opera */
+        }
+      }
+      .specialty_4{
+        top: -1.3*@ratio;
+        left: 10.3*@ratio;
+        animation:pules_4 5s linear 0s infinite;
+        -moz-animation: pules_4 5s linear 0s infinite;
+        -webkit-animation: pules_4 5s linear 0s infinite;
+        -o-animation: pules_4 5s linear 0s infinite;
+
+        @keyframes pules_4{
+          0% {top: -1.3*@ratio}
+          50% { top: -1.7*@ratio}
+          100%{ top: -1.3*@ratio }
+        }
+        /* Firefox */
+        @-moz-keyframes pules_4 {
+          0% {top: -1.3*@ratio}
+          50% { top: -1.7*@ratio}
+          100%{ top: -1.3*@ratio }
+        }
+        /* Safari 和 Chrome */
+        @-webkit-keyframes pules_4 {
+          0% {top: -1.3*@ratio}
+          50% { top: -1.7*@ratio}
+          100%{ top: -1.3*@ratio }
+        }
+        /* Opera */
+        @-o-keyframes pules_4 {
+          0% {top: -1.3*@ratio}
+          50% { top: -1.7*@ratio}
+          100%{ top: -1.3*@ratio }
+        }
+
+        &:hover{
+          animation-play-state:paused;
+        }
+        .title{
+          transform: rotate3d(1, 1, 1, 35deg);
+          -ms-transform: rotate3d(1, 1, 1, 35deg); 	/* IE 9 */
+          -moz-transform: rotate3d(1, 1, 1, 35deg); 	/* Firefox */
+          -webkit-transform: rotate3d(1, 1, 1, 35deg); /* Safari 和 Chrome */
+          -o-transform: rotate3d(1, 1, 1, 35deg); 	/* Opera */
+        }
+      }
+      .specialty_5{
+        top: 0.05*@ratio;
+        left: 11.75*@ratio;
+        animation:pules_5 5s linear 0s infinite;
+        -moz-animation: pules_5 5s linear 0s infinite;
+        -webkit-animation: pules_5 5s linear 0s infinite;
+        -o-animation: pules_5 5s linear 0s infinite;
+
+        @keyframes pules_5{
+          0% {top: 0.05*@ratio}
+          50% { top: 0.45*@ratio}
+          100%{ top: 0.05*@ratio }
+        }
+        /* Firefox */
+        @-moz-keyframes pules_5 {
+          0% {top: 0.05*@ratio}
+          50% { top: 0.45*@ratio}
+          100%{ top: 0.05*@ratio }
+        }
+        /* Safari 和 Chrome */
+        @-webkit-keyframes pules_5 {
+          0% {top: 0.05*@ratio}
+          50% { top: 0.45*@ratio}
+          100%{ top: 0.05*@ratio }
+        }
+        /* Opera */
+        @-o-keyframes pules_5 {
+          0% {top: 0.05*@ratio}
+          50% { top: 0.45*@ratio}
+          100%{ top: 0.05*@ratio }
+        }
+
+        &:hover{
+          animation-play-state:paused;
+        }
+        .title{
+          transform: rotate3d(1, 1, 1, 35deg);
+          -ms-transform: rotate3d(1, 1, 1, 35deg); 	/* IE 9 */
+          -moz-transform: rotate3d(1, 1, 1, 35deg); 	/* Firefox */
+          -webkit-transform: rotate3d(1, 1, 1, 35deg); /* Safari 和 Chrome */
+          -o-transform: rotate3d(1, 1, 1, 35deg); 	/* Opera */
+        }
+      }
+    }
+
+    /* --- 应用场景 ---*/
+    .applicationsScene{
+      .block();
+      padding-top: @ratio*0.75;
+      h1{
+        letter-spacing: 0.2em;
+        margin-bottom: @ratio*0.65;
+        color: @fontColor;
+        font-size: 3.2rem;
+        height: @ratio*0.32;
+        line-height: @ratio*0.32;
+      }
+      .appContent{
+        margin: 0 @ratio*0.92;
+        .item{
+          width: @appSideWidth;
+          height: @appSideHeight;
+          float: left;
+          margin: 0 @ratio*0.17;
+          .content{
+            height: @appContentHeight;
+            width: 100%;
+            .picture{
+              height: @appPictureHeight;
+              width: @appSideWidth;
+              background-color: #f7f7f7;
+              border-radius: @ratio*0.1;
+              cursor: pointer;
+              overflow: hidden;
+              img{
+                width: 100%;
+                height: auto;
+                transition:all 0.5s; /*图片放大过程的时间*/
+              }
+              .description{
+                height: @appPictureHeight;
+                width: @appSideWidth;
+                position: relative;
+                top: -@appPictureHeight;
+                background-color: rgba(39,50,116,0.8);
+                display: none;
+                text-align: center;
+                padding: 0 0.40*@ratio;
+                vertical-align: center;
+                span{
+                  color: white;
+                  font-size: 2rem;
+                  display: table-cell;
+                  vertical-align: middle;
+                }
+              }
+              &:hover{
+                .description{
+                  display: table;
+                  animation:slideIn 0.5s ease-out 0s 1;
+                  @keyframes slideIn{
+                    0% {top: 0 }
+                    100%{top: -@appPictureHeight;}
+                  }
+                }
+                img{
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+          .title{
+            height: @appTitleHeight;
+            font-size: 2.4rem;
+            letter-spacing: 0.2em;
+            color: @fontColor;
+          }
+          &:nth-last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    height: @footerHeight;
+    background-color: #110520;
+  }
+}

@@ -19,8 +19,5 @@ export default {
     chrome: 58,
     ie: 9,
   },
-  exportStatic:{
-    htmlSuffix: true,
-    dynamicRoot: true,
-  },
+  exportStatic:{},
 }

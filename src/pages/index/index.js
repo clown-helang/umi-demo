@@ -1,11 +1,13 @@
 import React,{ Component } from 'react';
 import styles from './index.less';
 import NavBar from '../../components/NavBar';
+import NavBar2 from '../../components/NavBar2';
 import Footer from '../../components/Footer';
 import { products, appScene, softwarePlant } from '../../assets/data/HomeDTO';
 import { Carousel } from 'antd';
 import bannerSmall from '../../assets/images/banner-small.png';
 import dot from '../../assets/images/dot.png';
+import 'raf/polyfill'
 
 function Home() {
   return (
